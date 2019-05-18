@@ -17,6 +17,7 @@ import javafx.stage.Stage;
  *
  * @author rami
  */
+// real author - Daren
 public class LethalChecker extends Application
 {
     
