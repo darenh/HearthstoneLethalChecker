@@ -19,20 +19,7 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root, 900, 650);
 	scene.getStylesheets().add(MainApp.class.getResource("/styles/Styles.css").toExternalForm());
-        //scene.getStylesheets().add("/styles/Styles.css");
         
-	String url = "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/";
-	String cardName = "Malygos";
-	
-	url = url + cardName;
-	System.out.println(url);
-	
-	HttpResponse<JsonNode> response = Unirest.get(url)
-	.header("X-RapidAPI-Host", "omgvamp-hearthstone-v1.p.rapidapi.com")
-	.header("X-RapidAPI-Key", "ee3bed5e1bmshe33761c800b3944p188172jsnf9812b22adf7")
-	.asJson();
-	
-	System.out.println(response.getBody());
         stage.setTitle("Hearthstone Lethal Checker");
         stage.setScene(scene);
         stage.show();

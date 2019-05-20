@@ -5,6 +5,10 @@
  */
 package com.mycompany.LethalChecker;
 
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -26,14 +30,38 @@ public class FXMLController implements Initializable
     private Button button1;
     
     @FXML
-    private void handleButtonAction(ActionEvent event)
+    private Button button2;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) throws UnirestException
     {
 	if (event.getSource() == button1)
 	{
 	    String deckString;
-	    System.out.println("You clicked me!");
 	    deckString = textfield1.getCharacters().toString();
 	    System.out.println(deckString);
+	    
+	    for (int i = 0; i < deckString.length(); i++)
+	    {
+		
+	    }
+	    
+	    String url = "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/search/";
+	    String cardName = "Malygos";
+
+	    url = url + cardName;
+	    System.out.println(url);
+
+	    HttpResponse<JsonNode> response = Unirest.get(url)
+	    .header("X-RapidAPI-Host", "omgvamp-hearthstone-v1.p.rapidapi.com")
+	    .header("X-RapidAPI-Key", "ee3bed5e1bmshe33761c800b3944p188172jsnf9812b22adf7")
+	    .asJson();
+	
+	    System.out.println(response.getBody());
+	}
+	else if (event.getSource() == button2)
+	{
+	    System.out.println("Next button clicked.");
 	}
     }
     
