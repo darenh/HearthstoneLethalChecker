@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass>com.mycompany.mavenproject1test.MainApp</mainClass>
+        <mainClass>com.mycompany.LethalChecker.MainApp</mainClass>
 	<jackson.version>2.9.9</jackson.version>
     </properties>
 

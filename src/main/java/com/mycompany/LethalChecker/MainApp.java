@@ -1,4 +1,4 @@
-package com.mycompany.mavenproject1test;
+package com.mycompany.LethalChecker;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
