@@ -16,6 +16,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /**
  *
@@ -38,6 +40,7 @@ public class FXMLController implements Initializable
 	if (event.getSource() == button1)
 	{
 	    String deckString;
+
 	    deckString = textfield1.getCharacters().toString();
 	    System.out.println(deckString);
 	    
@@ -56,6 +59,11 @@ public class FXMLController implements Initializable
 	    .header("X-RapidAPI-Host", "omgvamp-hearthstone-v1.p.rapidapi.com")
 	    .header("X-RapidAPI-Key", "ee3bed5e1bmshe33761c800b3944p188172jsnf9812b22adf7")
 	    .asJson();
+	    
+	    JSONObject myObj = response.getBody().getObject();
+	    String msg = myObj.getString("error_message");
+	    //JSONArray results = myObj.getJSONArray();
+	    
 	
 	    System.out.println(response.getBody());
 	}
