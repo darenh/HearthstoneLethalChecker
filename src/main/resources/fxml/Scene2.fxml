@@ -21,10 +21,12 @@
     <center> 
 	<GridPane id="GridPane" alignment="center" hgap="10" vgap="10" > 
             <Rectangle fx:id="recDice1" GridPane.columnIndex="5" GridPane.rowIndex="1" fill="whitesmoke" stroke="BLACK" strokeType="INSIDE" height="60.0" width="10.0" />
-	    <Label text="Hola" GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id="label" />
-	    <Button text="yes" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleButtonAction" fx:id="button1" />
 	</GridPane>
     </center>
+    
+    <bottom>
+	<Button text="Back" onAction="#handleButtonAction" fx:id="button1"/>
+    </bottom>
     
     
     <style>
