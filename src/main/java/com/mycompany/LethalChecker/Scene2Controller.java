@@ -31,9 +31,8 @@ import javafx.stage.Stage;
  */
 public class Scene2Controller implements Initializable
 {
-     @FXML
+    @FXML
     private Button button1;
-    
 
     /**
      * Initializes the controller class.
@@ -43,7 +42,13 @@ public class Scene2Controller implements Initializable
     {
 	if (event.getSource() == button1)
 	{
-            System.out.println("Hi");
+            //System.out.println("Hi");
+	    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+	    Scene scene = new Scene(root, 900, 650);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            app_stage.setResizable(true);
+            app_stage.setScene(scene);
+            app_stage.show();  
         }
     }
         

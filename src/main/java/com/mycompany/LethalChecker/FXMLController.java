@@ -40,7 +40,6 @@ public class FXMLController implements Initializable
     @FXML
     private Button button2;
     
-    
     @FXML
     private void handleButtonAction(ActionEvent event) throws UnirestException, IOException 
     {
@@ -68,7 +67,7 @@ public class FXMLController implements Initializable
 	    .asJson();
 	    
 	    JSONObject myObj = response.getBody().getObject();
-	    String msg = myObj.getString("error_message");
+	    //String msg = myObj.getString("error_message");
 	    //JSONArray results = myObj.getJSONArray();
 	    
 	
@@ -77,13 +76,14 @@ public class FXMLController implements Initializable
 	else if (event.getSource() == button2) 
 	{
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene2.fxml"));
-            Scene oof = new Scene(root, 900, 650);
+            Scene scene2 = new Scene(root, 900, 650);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setResizable(true);
-            app_stage.setScene(oof);
+            app_stage.setScene(scene2);
             app_stage.show();  
 	    System.out.println("Next button clicked.");
 	}
+
     }
     
     @Override

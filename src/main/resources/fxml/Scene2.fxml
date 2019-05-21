@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.LethalChecker.Scene2Controller" stylesheets="/styles/scene2.css">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.LethalChecker.Scene2Controller" stylesheets="/styles/Scene2.css">
     
     <top>
 	<Label text="It's Lethal Time!" BorderPane.alignment="center" fx:id="label1" />
@@ -19,10 +19,13 @@
     
     <center> 
 	<GridPane id="GridPane" alignment="center" hgap="10" vgap="10" > 
-	    <Label text="Hola" GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id="label" />
-	    <Button text="yes" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#handleButtonAction" fx:id="button1" />
+	    
 	</GridPane>
     </center>
+    
+    <bottom>
+	<Button text="Back" onAction="#handleButtonAction" fx:id="button1"/>
+    </bottom>
     
     
     <style>
