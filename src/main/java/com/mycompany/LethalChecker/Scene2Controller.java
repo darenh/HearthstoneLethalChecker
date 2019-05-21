@@ -33,6 +33,15 @@ public class Scene2Controller implements Initializable
 {
     @FXML
     private Button button1;
+    
+    @FXML
+    private TextField textfield1;
+    
+    @FXML
+    private TextField textfield2;
+     
+    @FXML
+    private Button button2;
 
     /**
      * Initializes the controller class.
@@ -44,12 +53,20 @@ public class Scene2Controller implements Initializable
 	{
             //System.out.println("Hi");
 	    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-	    Scene scene = new Scene(root, 900, 650);
+	    Scene scene = new Scene(root, 1200, 800);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setResizable(true);
             app_stage.setScene(scene);
             app_stage.show();  
         }
+        if (event.getSource() == button2)
+	{
+	    String deckString;
+
+	    deckString = textfield1.getCharacters().toString();
+	    System.out.println(deckString);
+        }
+	    
     }
         
     @Override

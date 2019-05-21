@@ -17,7 +17,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
         
-        Scene scene = new Scene(root, 900, 650);
+        Scene scene = new Scene(root, 1300, 900);
 	scene.getStylesheets().add(MainApp.class.getResource("/styles/Styles.css").toExternalForm());
         
         stage.setTitle("Hearthstone Lethal Checker");

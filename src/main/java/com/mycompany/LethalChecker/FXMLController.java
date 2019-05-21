@@ -76,7 +76,7 @@ public class FXMLController implements Initializable
 	else if (event.getSource() == button2) 
 	{
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene2.fxml"));
-            Scene scene2 = new Scene(root, 900, 650);
+            Scene scene2 = new Scene(root, 1300, 900);
             Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             app_stage.setResizable(true);
             app_stage.setScene(scene2);
