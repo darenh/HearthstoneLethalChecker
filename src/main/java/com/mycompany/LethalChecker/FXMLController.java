@@ -9,14 +9,20 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 /**
  *
  * @author rami
@@ -32,8 +38,9 @@ public class FXMLController implements Initializable
     @FXML
     private Button button2;
     
+    
     @FXML
-    private void handleButtonAction(ActionEvent event) throws UnirestException
+    private void handleButtonAction(ActionEvent event) throws UnirestException, IOException 
     {
 	if (event.getSource() == button1)
 	{
@@ -59,8 +66,14 @@ public class FXMLController implements Initializable
 	
 	    System.out.println(response.getBody());
 	}
-	else if (event.getSource() == button2)
+	else if (event.getSource() == button2) 
 	{
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene2.fxml"));
+            Scene oof = new Scene(root, 900, 650);
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            app_stage.setResizable(true);
+            app_stage.setScene(oof);
+            app_stage.show();  
 	    System.out.println("Next button clicked.");
 	}
     }

@@ -1,2 +1,3 @@
-com/mycompany/LethalChecker/FXMLController.class
-com/mycompany/LethalChecker/MainApp.class
+com\mycompany\LethalChecker\MainApp.class
+com\mycompany\LethalChecker\Scene2Controller.class
+com\mycompany\LethalChecker\FXMLController.class
