@@ -68,7 +68,7 @@ public class FXMLController implements Initializable
 	    .asJson();
 	    
 	    JSONObject myObj = response.getBody().getObject();
-	    String msg = myObj.getString("error_message");
+	    // String msg = myObj.getString("error_message");
 	    //JSONArray results = myObj.getJSONArray();
 	    
 	
